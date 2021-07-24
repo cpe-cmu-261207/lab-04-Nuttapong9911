@@ -7,13 +7,90 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src='script.js' defer></script>
 	<title>Lab 04</title>
-	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+	<style>
+		.taskdiv {
+			text-align: left;
+			background-color: lightblue;
+			font-size: medium;
+			flex: unset;
+		}
+
+		.taskdiv:hover .donebutton{
+			display: inline-flex;
+		}
+
+		.taskdiv:hover .delbutton{
+			display: inline-flex;
+		}
+
+		.maindiv {
+			text-align: center;
+			font-size: xx-large;
+		}
+
+		.inputBox {
+			text-align: center;
+		}
+
+		#input {
+			font-size: x-large;
+		}
+
+		.add {
+			font-size: x-large;
+			background-color: darkslateblue;
+		}
+
+		.donebutton {
+			font-size: small;
+			background-color: limegreen;
+			object-position: right;
+			display: none;
+		}
+
+		.delbutton {
+			font-size: small;
+			background-color: crimson;
+			display: none;
+		}
+
+		.buttondiv {
+			text-align: right;
+		}
+
+		.donediv {
+			background-color: tomato;
+			text-decoration-line: line-through;
+		}
+
+		
+
+		#test {
+			background-color: red;
+		}
+	</style>
+
+
 </head>
 
-<body>
-	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
+<body class="bg-gray-300 py-10 justify-center max-w-sm mx-auto ">
+	<div>
+		<div class="maindiv">
+			<h1>My Todo List</h1>
+		</div>
+		<br>
+
+		<div class="inputBox">
+			<input type="text" id="input">
+			<button onclick="addToList()" class="add">add!</button>
+		</div>
+		<br>
+	</div>
+
+
+
 </body>
 
 </html>

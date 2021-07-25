@@ -8,26 +8,52 @@
 	<script src='script.js' defer></script>
 	<title>Lab 04</title>
 	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;500&family=PT+Serif&display=swap" rel="stylesheet">
 	<style>
 		.taskdiv {
 			text-align: left;
-			background-color: lightblue;
-			font-size: medium;
-			flex: unset;
+			font-size: x-large;
+			flex:unset;
+			margin: 10px;
+			margin-bottom: 20px;
+			color: #cdc9be;
+			font-family: 'Lexend', sans-serif;
+			border-bottom-width: 1px;
+			padding-bottom: 20px;
+			font-weight: 300;
+			
 		}
 
 		.taskdiv:hover .donebutton{
-			display: inline-flex;
+			display:inline-flex;
+			flex:unset;
+			padding: 5px;
+			margin: 5px;
 		}
 
 		.taskdiv:hover .delbutton{
 			display: inline-flex;
+			padding: 5px;
 		}
 
-		.maindiv {
+		.donediv {
+			text-align: left;
+			font-size: x-large;
+			text-decoration-line: line-through;
+			margin: 10px;
+			color: #cdc9be;
+			font-family: 'Lexend', sans-serif;
+			padding-bottom: 20px;
+			font-weight: 300;
+		}
+
+		.headdiv {
 			text-align: center;
-			font-size: xx-large;
+			font-size: 3rem;
+			color: #cdc9be;
+			font-family: 'Lexend', sans-serif;
+			font-weight: 300;
 		}
 
 		.inputBox {
@@ -36,55 +62,64 @@
 
 		#input {
 			font-size: x-large;
+			background-color: #8d8e88;
+			font-family: 'Lexend', sans-serif;
 		}
 
 		.add {
 			font-size: x-large;
-			background-color: darkslateblue;
+			background-color: #2e3b44;
+			padding-left: 10px;
+			padding-right: 10px;
+			color: #cdc9be;
 		}
 
 		.donebutton {
-			font-size: small;
-			background-color: limegreen;
+			font-size: medium;
+			background-color:dodgerblue;
 			object-position: right;
 			display: none;
+			font-family: 'Lexend', sans-serif;
 		}
 
 		.delbutton {
-			font-size: small;
-			background-color: crimson;
+			font-size: medium;
+			background-color:midnightblue;
 			display: none;
+			font-family: 'Lexend', sans-serif;
 		}
 
 		.buttondiv {
 			text-align: right;
+			
 		}
 
-		.donediv {
-			background-color: tomato;
-			text-decoration-line: line-through;
+
+		#test{
+			background-color: yellow;
 		}
 
-		
-
-		#test {
-			background-color: red;
+		#test2{
+			background-color:cyan;
 		}
+
+
 	</style>
+	
 
 
 </head>
 
-<body class="bg-gray-300 py-10 justify-center max-w-sm mx-auto ">
+<body class=" py-10 justify-center max-w-md mx-auto " style="background:#415e6e;">
 	<div>
-		<div class="maindiv">
-			<h1>My Todo List</h1>
+		<div class="headdiv">
+			<h1>MY TODO LIST</h1>
 		</div>
 		<br>
 
 		<div class="inputBox">
 			<input type="text" id="input">
-			<button onclick="addToList()" class="add">add!</button>
+			<button onclick="addToList()" class="add"> + </button>
 		</div>
 		<br>
 	</div>
